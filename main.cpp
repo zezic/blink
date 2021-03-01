@@ -1,14 +1,23 @@
 #include <Arduino.h>
 
-int RXLED = 17;
+int main(void) {
+	init();
+	#if defined(USBCON)
+		USBDevice.attach();
+	#endif
 
-void setup() {                
-	pinMode(RXLED, OUTPUT);
-}
+	pinMode(LED_BUILTIN_RX, OUTPUT);
+	pinMode(LED_BUILTIN_TX, OUTPUT);
 
-void loop() {
-	digitalWrite(RXLED, LOW);
-	delay(300);
-	digitalWrite(RXLED, HIGH);
-	delay(300);
+	for (;;) {
+		digitalWrite(LED_BUILTIN_RX, LOW);
+		digitalWrite(LED_BUILTIN_TX, HIGH);
+		delay(500);
+
+		digitalWrite(LED_BUILTIN_RX, HIGH);
+		digitalWrite(LED_BUILTIN_TX, LOW);
+		delay(500);
+	}
+
+	return 0;
 }

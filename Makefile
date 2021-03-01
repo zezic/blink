@@ -9,4 +9,6 @@ ISP_PROG          = usbasp
 AVRDUDE_OPTS      = -v
 USB_VID           = 0x1b4f
 USB_PID           = 0x9206
+LOCAL_CPP_SRCS    = $(wildcard *.cpp)
+NO_CORE_MAIN_CPP  = true
 include /usr/share/arduino/Arduino.mk

@@ -28,8 +28,16 @@ make
 
 ## Flashing
 
+Normal flashing
+
 ```
 make upload
+```
+
+Emergency flashing, in case someone forgot to initialize USB with `USBDevice.attach()`
+
+```
+./avrdude-flash.sh build-promicro-16MHzatmega32U4/blink.hex
 ```
 
 ## Getting help
