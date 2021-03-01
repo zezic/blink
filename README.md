@@ -1,6 +1,6 @@
 <table>
     <tr>
-        <td><img align="left" src="logo.png?raw=true"></td>
+        <td><img align="left" src="logo.png?raw=true" width="250px"></td>
         <td>
             <h1>Blink</h1>
             <p>A «No-shit» setup for compiling and flashing C++ code to SparkFun Pro Micro board using Linux host.</p>
